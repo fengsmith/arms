@@ -1,0 +1,78 @@
+# 为 Java 应用快速安装探针 {#concept_102784_zh .concept}
+
+使用一键接入方式为 Java 应用安装探针，只需简单操作即可快速安装。Java 应用接入 ARMS 应用监控后无需重启应用即可开始监控。当应用重启时，探针会自动加载，该应用将自动接入 ARMS 应用监控。
+
+## 前提条件 {#section_nsq_j5g_qgb .section}
+
+确保您使用的第三方组件或框架在[应用监控兼容性列表](intl.zh-CN/应用监控/应用监控兼容性列表.md#)范围内。
+
+## 操作步骤 {#section_st2_rzl_lgb .section}
+
+若您的应用已经按照普通接入方式接入 ARMS 应用监控，则需先[卸载探针](intl.zh-CN/应用监控/开始监控 Java 应用/以普通方式安装探针/为 Java 应用安装探针.md#uninstall)，才能正常使用一键接入方式。具体接入步骤如下。
+
+1.  登录[ARMS 控制台](https://arms-intl.console.aliyun.com/#/home)，在左侧导航栏中选择**应用监控** \> **应用列表**。
+2.  在应用列表页面右上角单击**新接入应用**。
+3.  在新接入应用页面选择使用语言为 Java，选择使用环境为默认环境，选择接入方式为一键接入。 然后查看并保存 LicenseKey。
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152233/155531262044367_zh-CN.png)
+
+4.  运行您所在地域对应的安装脚本。完成后单击**下一步**
+
+    -   将 `<licenseKey>` 替换为您的 licenseKey；
+
+    -   将 Java-Demo 替换成您的应用名，应用名暂不支持中文。
+
+    ```
+    # 杭州地域
+    wget -O- http://arms-apm-hangzhou.oss-cn-hangzhou.aliyuncs.com/install.sh | sh && ~/.arms/supervisor/cli.sh <licenseKey> Java-Demo
+    # 上海地域
+    wget -O- http://arms-apm-shanghai.oss-cn-shanghai.aliyuncs.com/install.sh | sh && ~/.arms/supervisor/cli.sh <licenseKey> Java-Demo
+    # 青岛地域
+    wget -O- http://arms-apm-qingdao.oss-cn-qingdao.aliyuncs.com/install.sh | sh && ~/.arms/supervisor/cli.sh <licenseKey> Java-Demo
+    # 北京地域
+    wget -O- http://arms-apm-beijing.oss-cn-beijing.aliyuncs.com/install.sh | sh && ~/.arms/supervisor/cli.sh <licenseKey> Java-Demo
+    # 深圳地域
+    wget -O- http://arms-apm-shenzhen.oss-cn-shenzhen.aliyuncs.com/install.sh | sh && ~/.arms/supervisor/cli.sh <licenseKey> Java-Demo
+    # 新加坡地域
+    wget -O- http://arms-apm-ap-southeast.oss-ap-southeast-1.aliyuncs.com/cloud_ap-southeast-1/install.sh | sh && ~/.arms/supervisor/cli.sh <licenseKey> Java-Demo
+    # 金融云环境
+    wget -O- http://arms-apm-hangzhou.oss-cn-hangzhou.aliyuncs.com/finance/install.sh | sh && ~/.arms/supervisor/cli.sh <licenseKey> Java-Demo
+    ```
+
+
+**说明：** 
+
+-   执行安装脚本后，该脚本会自动下载最新探针。
+-   若您的服务器只有一个 Java 进程，安装脚本会默认选择该进程安装探针；若您的服务器有多个 Java 进程，请根据提示选择一个进程安装探针。
+
+约一分钟后，若您的应用出现在应用列表中且有数据上报，则说明接入成功。
+
+## 卸载探针 {#section_xkw_j3m_lgb .section}
+
+当您不需要 ARMS 探针采集数据时，可按照以下步骤卸载探针。
+
+1.  执行 `jps -l` 命令，并在执行结果中找到 `com.alibaba.mw.arms.apm.supervisor.daemon.Daemon` 对应的进程号。
+
+    本示例中，`com.alibaba.mw.arms.apm.supervisor.daemon.Daemon` 对应的进程号为：62857。
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152233/155531262043111_zh-CN.png)
+
+2.  执行命令 `kill -9 进程号`。例如：`kill -9 62857`。
+3.  重新启动您的应用。
+
+## 常见问题 {#section_cpz_bwg_qgb .section}
+
+执行一键接入 Java 应用脚本时出现 getcwd 相关错误若遇到以下错误：
+
+```
+shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory Error occurred during initialization of VM java.lang.Error: Properties init: Could not determine current working directory. at java.lang.System.initProperties(Native Method) at java.lang.System.initializeSystemClass(System.java:1119)
+```
+
+可能原因是执行脚本过程中误删了当前目录。解决办法为执行 `cd`后重新运行脚本。
+
+## 相关文档 {#section_d4p_2y1_mgb .section}
+
+-   [为 Java 应用安装探针的常见问题](../../../../../intl.zh-CN/常见问题/应用监控常见问题/为 Java 应用安装探针的常见问题.md#)
+-   [使用 OpenFeign 组件的应用在 ARMS 中数据不完整怎么办？](../../../../../intl.zh-CN/常见问题/应用监控常见问题/使用 OpenFeign 组件的应用在 ARMS 中数据不完整怎么办？.md#)
+-   [为 Java 应用快速安装探针的常见问题](../../../../../intl.zh-CN/常见问题/应用监控常见问题/为 Java 应用快速安装探针的常见问题.md#)
+
