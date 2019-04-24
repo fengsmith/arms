@@ -20,7 +20,7 @@
 
 3.  在新应用接入页面选择使用语言为 **Java**，选择使用环境为**默认**，选择接入方式为**手动接入**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152228/155607208944353_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152228/155608614444353_zh-CN.png)
 
 4.  采用以下方法之一下载探针，然后在控制台下载探针页签中单击**下一步**。
 
@@ -55,21 +55,21 @@
 
 6.  在控制台安装探针页签中查看并保存 LicenseKey。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152228/155607208942270_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152228/155608614442270_zh-CN.png)
 
 7.  采用以下方法之一添加 `appName` 以及 `LicenseKey` 参数。然后在控制台**安装探针**页签中单击**下一步**。
 
     -   方法一：根据您的应用运行环境修改 JVM 参数。
 
-        **说明：** 将 `xxx` 分别替换成您的 LicenseKey 和应用名称，应用名暂不支持中文。`{user.workspace}` 为探针解压的目录，请根据实际替换。
+        **说明：** 将 `xxx` 分别替换成您的 LicenseKey 和应用名称，应用名暂不支持中文。\{user.workspace\} 为探针解压的目录，请根据实际替换。
 
         -   Tomcat 运行环境
 
-            -   在 Linux 或 Mac 环境下，请在 `{TOMCAT_HOME}/bin` 目录下的 setenv.sh 文件中加入以下配置。
+            -   在 Linux 或 Mac 环境下，请在 \{TOMCAT\_HOME\}/bin 目录下的 setenv.sh 文件中加入以下配置。
 
                 **说明：** 
 
-                如果您的 Tomcat 版本没有 setenv.sh 配置文件，请打开 `{TOMCAT_HOME}/bin/catalina.sh` 文件，找到 `JAVA_OPTS` 变量定义，并在该变量定义后加入以下配置。
+                如果您的 Tomcat 版本没有 setenv.sh 配置文件，请打开 \{TOMCAT\_HOME\}/bin/catalina.sh 文件，找到 `JAVA_OPTS` 变量定义，并在该变量定义后加入以下配置。
 
                 **点击下载参考样例：**[catalina.sh](https://arms-public.oss-cn-shanghai.aliyuncs.com/arms-agent/catalina.sh)（第 256 行定义）。
 
@@ -77,7 +77,7 @@
                 JAVA_OPTS="$JAVA_OPTS -javaagent:/{user.workspace}/ArmsAgent/arms-bootstrap-1.7.0-SNAPSHOT.jar -Darms.licenseKey=xxx -Darms.appName=xxx" 
                 ```
 
-            -   在 Windows 环境下，请在 `{TOMCAT_HOME}/bin/catalina.bat` 文件中加入：
+            -   在 Windows 环境下，请在 \{TOMCAT\_HOME\}/bin/catalina.bat 文件中加入：
 
                 ```
                 set "JAVA_OPTS=%JAVA_OPTS% -javaagent:{user.workspace}ArmsAgentarms-bootstrap-1.7.0-SNAPSHOT.jar -Darms.licenseKey=xxx -Darms.appName=xxx" 
@@ -85,7 +85,7 @@
 
         -   Jetty 运行环境
 
-            在 `{JETTY_HOME}/start.ini` 配置文件中加入以下配置：
+            在 \{JETTY\_HOME\}/start.ini 配置文件中加入以下配置：
 
             ```
             --exec #打开注释 前面的井号去掉即可 -javaagent:/{user.workspace}/ArmsAgent/arms-bootstrap-1.7.0-SNAPSHOT.jar -Darms.licenseKey=xxx -Darms.appName=xxx 
@@ -99,17 +99,17 @@
             java -javaagent:/{user.workspace}/ArmsAgent/arms-bootstrap-1.7.0-SNAPSHOT.jar -Darms.licenseKey=xxx -Darms.appName=xxx -jar demoApp.jar 
             ```
 
-            **说明：** demoApp.jar 为原应用 JAR 包名称，请根据实际情况替换。
+            **说明：** demoApp.jar 为原应用 Jar 包名称，请根据实际情况替换。
 
         -   Resin 运行环境
 
-            1.  启动 Resin 进程时，需要在 `conf/resion.xml` 配置文件中添加以下标签：
+            1.  启动 Resin 进程时，需要在 conf/resion.xml 配置文件中添加以下标签：
 
                 ```
                 <server-default> <jvm-arg>-javaagent:{user.workspace}/ArmsAgent/arms-bootstrap-1.7.0-SNAPSHOT.jar</jvm-arg> <jvm-arg>-Darms.licenseKey=xxx</jvm-arg> <jvm-arg>-Darms.appName=xxx</jvm-xxxarg> </server-default> 
                 ```
 
-            2.  在 `conf/app-default.xml` 文件中添加以下标签：
+            2.  在 conf/app-default.xml 文件中添加以下标签：
 
                 ```
                 <library-loader path="{user.workspace}/ArmsAgent/plugin"/> 
@@ -157,7 +157,7 @@
 
 ## 卸载 Java 探针 {#uninstall .section}
 
-1.  删除[第 7 步](#step7)中添加的所有参数。
+1.  删除[第 7 步](#codeph_mzu_zln_tg7)中添加的所有参数。
 2.  重启 Java 应用。
 
 ## 相关文档 {#section_d4p_2y1_mgb .section}
