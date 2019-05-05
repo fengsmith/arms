@@ -15,12 +15,12 @@
 
 为 Java 应用安装探针操作步骤如下：
 
-1.  登录[ARMS 控制台](https://arms-intl.console.aliyun.com/#/home)，在左侧导航栏中选择**应用监控** \> **应用列表** 。
+1.  登录 [ARMS 控制台](https://arms-ap-southeast-1.console.aliyun.com/#/home)，在左侧导航栏中选择**应用监控** \> **应用列表** 。
 2.  在应用列表页面右上角单击**新接入应用**。
 
 3.  在新应用接入页面选择使用语言为 **Java**，选择使用环境为**默认**，选择接入方式为**手动接入**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152228/155608614444353_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152228/155704859144353_zh-CN.png)
 
 4.  采用以下方法之一下载探针，然后在控制台下载探针页签中单击**下一步**。
 
@@ -55,7 +55,7 @@
 
 6.  在控制台安装探针页签中查看并保存 LicenseKey。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152228/155608614442270_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152228/155704859142270_zh-CN.png)
 
 7.  采用以下方法之一添加 `appName` 以及 `LicenseKey` 参数。然后在控制台**安装探针**页签中单击**下一步**。
 
