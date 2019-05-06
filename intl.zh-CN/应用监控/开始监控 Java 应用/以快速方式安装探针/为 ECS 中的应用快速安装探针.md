@@ -1,6 +1,6 @@
-# **为 ECS 中的应用快速安装探针** {#concept_109296_zh .concept}
+# 为 ECS 中的应用快速安装探针 {#concept_109296_zh .concept}
 
-借助 ARMS 应用监控，您可以对云服务器 ECS 上的应用进行应用拓扑、接口调用、异常事务和慢事务、SQL 分析等监控。本文介绍了如何在 ARMS 控制台上快速接入 ECS 应用。
+借助 ARMS 应用监控，您可以对云服务器 ECS 上的应用进行应用拓扑、接口调用、异常事务和慢事务、SQL 分析等监控。ARMS 与 ECS 进行了数据联通，通过在 ARMS 控制台上简单操作即可快速为同阿里云账户下的 ECS 中的应用安装探针。
 
 ## 前提条件 {#section_zbs_pcj_ygb .section}
 
@@ -8,41 +8,42 @@
 
 ## 操作步骤 {#section_xqy_wdj_ygb .section}
 
-1.  登录[ARMS 控制台](https://arms-intl.console.aliyun.com/#/home)，在左侧导航栏中选择**应用监控** \> **应用列表** 。
+1.  登录 [ARMS 控制台](https://arms-ap-southeast-1.console.aliyun.com/#/home)，在左侧导航栏中选择**应用监控** \> **应用列表** 。
 2.  在应用列表页面右上角单击**新接入应用**。
 3.  在新接入应用页面选择使用语言为 **Java**，选择使用环境为**云服务器 ECS**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152235/155531263644390_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152235/155713052044390_zh-CN.png)
 
-4.  首次接入时需要先进行 ARMS 访问 ECS 授权，请使用主账号请按以下步骤完成授权。 非首次接入请跳过此步骤。
+4.  首次接入时需要先进行 ARMS 访问 ECS 授权，请使用主账号完成授权。
 
     1.  在弹出的提示框中单击**进入 RAM 进行授权**。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152235/155531263643119_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152235/155713052043119_zh-CN.png)
 
     2.  在云资源访问授权页面选中 **AliyunARMSAccessingECSRole** 权限后单击**同意授权**。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152235/155531263643120_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152235/155713052043120_zh-CN.png)
 
-    3.  关闭同步 ECS 页面。
+    3.  在同步 ECS 页面单击**确定同步**。
 
-        **说明：** 若您需使用自定义监控接入 ECS 应用，则需进行同步 ECS 等操作。请参见[ECS 管理和 Agent 部署](../../../../../intl.zh-CN/自定义监控/管理数据源/ECS 数据源/ECS 管理和 Agent 部署.md#)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152235/155713052046413_zh-CN.png)
 
+    4.  关闭同步 ECS页面，完成授权。
     授权成功后，新接入应用页面中将显示此账号下所有 ECS 实例。
 
-5.  在请选择您需要安装的探针区域单击目标 ECS 实例**操作**列的**安装探针**，并在弹出的**提示**对话中单击**确认**。
+5.  在请选择您需要安装探针的应用区域单击目标 ECS 实例**操作**列的**安装探针**，并在弹出的**提示**对话中单击**确认**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152235/155531263643121_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152235/155713052043121_zh-CN.png)
 
-    在 ECS 上安装探针成功后，探针将获取此 ECS 上运行的所有进程信息并显示在目标 ECS 实例下方的进程列表中。
+    在 ECS 上安装探针成功后，ARMS 将获取此 ECS 上的所有进程信息并显示在目标 ECS 实例下方的进程列表中。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152235/155531263643122_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152235/155713052043122_zh-CN.png)
 
-    **说明：** 若成功安装探针后，ECS 进程信息不准确，请单击 ECS 实例左侧的 **-** 号然后单击 **+** 号刷新信息。若探针安装失败请参考[常见问题](#section_wqk_sxc_zgb)进行处理。
+    **说明：** 若成功安装探针后，ECS 进程信息不准确，请单击 ECS 实例左侧的 **-** 号然后单击 **+** 号刷新信息。若探针安装失败请参见[常见问题](#section_wqk_sxc_zgb)进行处理。
 
-6.  探针安装成功后，在下方的弹框中编辑目标进程的应用名称并单击**操作**列的**启动应用监控**。
+6.  探针安装成功后，在下方的弹框中编辑目标进程的**应用名称**，然后单击**操作**列的**启动应用监控**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152235/155531263643123_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152235/155713052043123_zh-CN.png)
 
     **说明：** 当多个进程的应用名称相同时，表现为一个监控任务下的多个实例。
 
@@ -51,13 +52,13 @@
 
 ## 卸载探针 {#section_l2f_wvc_zgb .section}
 
-当您不需要监控 ECS 上的应用时，可以卸载 ECS 上的探针。卸载之后，ARMS 将停止对该 ECS 上所有进程的监控。操作步骤如下：
+当您不需要监控 ECS 上的应用时，可以卸载 ECS 上的探针。卸载之后，ARMS 将停止对该 ECS 上所有应用的监控。操作步骤如下：
 
 1.  在安装探针的 ECS 中执行 `jps -l` 命令查看所有进程，在执行结果中找到 `com.alibaba.mw.arms.apm.supervisor.daemon.Daemon` 对应的进程号。
 
     本示例中，对应的进程号为：62857。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152233/155531263743111_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152233/155713052043111_zh-CN.png)
 
 2.  执行命令 `kill -9 进程号`。例如：`kill -9 62857`。
 
@@ -70,7 +71,7 @@
 1.  确保您的 ECS 可以访问所在地域的探针下载链接。
 
     ```
-    首先确保ECS可以访问外网，从 一键接入Java 应用 页面中 下载连接能够下载
+    首先确保 ECS 可以访问外网，且能够访问所在地域的探针下载链接。
     
     # 杭州地域
     http://arms-apm-hangzhou.oss-cn-hangzhou.aliyuncs.com/install.sh
@@ -83,14 +84,12 @@
     # 深圳地域
     http://arms-apm-shenzhen.oss-cn-shenzhen.aliyuncs.com/install.sh
     # 新加坡地域
-    http://arms-apm-ap-southeast.oss-ap-southeast-1.aliyuncs.com/cloud_ap-southeast-1/install.sh
-    					
+    http://arms-apm-ap-southeast.oss-ap-southeast-1.aliyuncs.com/cloud_ap-southeast-1/install.sh           
     ```
 
 2.  确保您的 ECS 可以访问 ARMS 控制台。
 
     ```
-    
     #国内
     https://arms.console.aliyun.com/
     
@@ -102,16 +101,16 @@
     1.  在左侧导航栏中选择**云助手**。
     2.  在云助手页面的搜索框中选择命令输入 `InstallJavaAgent` 命令。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152235/155531263743124_zh-CN.png)
+        若查找结果不存在，请联系 ARMS 服务账号。
 
-        **说明：** 若查找结果不存在，请联系 ARMS 服务账号。
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152235/155713052043124_zh-CN.png)
 
-    3.  在**执行记录**区域的搜索栏中输入 `InstallJavaAgent` 命令对应的 id，在查找结果中单击该记录右侧**操作**栏的**查看结果**，查看 `InstallJavaAgent` 命令是否执行成功。若未执行成功，根据细执行结果排查问题（如 ECS ECS 磁盘满、未安装 Java Agent等，可以通过清理磁盘或安装 Java Agent 解决），若不能解决请将详细执行结果反馈给 ARMS 服务账号。
+    3.  在云助手页面的**执行记录**区域的搜索栏中输入 `InstallJavaAgent` 命令对应的 id，在查找结果中单击该记录右侧**操作**列的**查看结果**，查看 `InstallJavaAgent` 命令是否执行成功。若未执行成功，根据细执行结果排查问题（如 ECS 磁盘满、未安装 Java Agent 等问题，可以通过清理磁盘或安装 Java Agent 解决），若不能解决请将详细执行结果反馈给 ARMS 服务账号。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152235/155531263743125_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152235/155713052043125_zh-CN.png)
 
 
 ## 相关文档 {#section_gr2_ds2_zgb .section}
 
--   [为 ECS 中的应用快速安装探针的常见问题](../../../../../intl.zh-CN/常见问题/应用监控常见问题/为 EDAS 中的应用快速安装探针的常见问题.md#)
+-   [为 ECS 中的应用快速安装探针的常见问题](../../../../intl.zh-CN/常见问题/应用监控常见问题/为 EDAS 中的应用快速安装探针的常见问题.md#)
 
