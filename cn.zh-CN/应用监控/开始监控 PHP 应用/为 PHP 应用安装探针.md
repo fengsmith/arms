@@ -4,7 +4,7 @@
 
 ## 前提条件 {#section_rgl_qs1_mgb .section}
 
--   确保您使用的机器安全组已开放 8442、8443、8883 三个端口的 TCP 公网入方向权限。为 ECS 开放入方向权限，请参见[添加安全组规则](../../../../intl.zh-CN/安全/安全组/添加安全组规则.md#)。
+-   确保您使用的机器安全组已开放 8442、8443、8883 三个端口的 TCP 公网出方向权限。为 ECS 开放出方向权限，请参见[添加安全组规则](../../../../intl.zh-CN/安全/安全组/添加安全组规则.md#)。
 
     **说明：** ARMS 不仅可接入阿里云 ECS 上的应用，还能接入其他能访问公网的服务器上的应用。
 
@@ -18,7 +18,7 @@
 
 3.  在新应用接入页面选择使用语言为 **PHP**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152237/155713410144408_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152237/155739540044408_zh-CN.png)
 
 4.  采用以下方法之一下载 PHP 探针，完成后单击**下一步**。
 
@@ -60,7 +60,7 @@
 
 6.  在安装探针页签查看并保存 LicenseKey。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152237/155713410143126_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152237/155739540043126_zh-CN.png)
 
 7.  采用以下方法之一安装和配置探针。
 
