@@ -4,7 +4,7 @@
 
 ## 前提条件 {#section_rgl_qs1_mgb .section}
 
--   确保您使用的机器安全组已开放 8442、8443、8883 三个端口的 TCP 公网入方向权限。若为 ECS 开放入方向权限，请参见[添加安全组规则](../../../../intl.zh-CN/安全/安全组/添加安全组规则.md#)。
+-   确保您使用的机器安全组已开放 8442、8443、8883 三个端口的 TCP 公网出方向权限。为 ECS 开放出方向权限，请参见[添加安全组规则](../../../../intl.zh-CN/安全/安全组/添加安全组规则.md#)。
 
     **说明：** ARMS 不仅可接入阿里云 ECS 上的应用，还能接入其他能访问公网的服务器上的应用。
 
@@ -20,7 +20,7 @@
 
 3.  在新应用接入页面选择使用语言为 **Java**，选择使用环境为**默认**，选择接入方式为**手动接入**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152228/155704859144353_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152228/155739542144353_zh-CN.png)
 
 4.  采用以下方法之一下载探针，然后在控制台下载探针页签中单击**下一步**。
 
@@ -55,7 +55,7 @@
 
 6.  在控制台安装探针页签中查看并保存 LicenseKey。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152228/155704859142270_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152228/155739542142270_zh-CN.png)
 
 7.  采用以下方法之一添加 `appName` 以及 `LicenseKey` 参数。然后在控制台**安装探针**页签中单击**下一步**。
 
