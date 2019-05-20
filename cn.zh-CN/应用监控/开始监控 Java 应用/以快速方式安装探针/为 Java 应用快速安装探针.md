@@ -16,7 +16,7 @@ ARMS 提供一键接入方式为 Java 应用安装探针，操作简单，安装
 2.  在应用列表页面右上角单击**新接入应用**。
 3.  在新接入应用页面选择使用语言为 **Java**，选择使用环境为**默认环境**，选择接入方式为**一键接入**。 然后查看并保存 LicenseKey。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152233/155713049444367_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152233/155834110544367_zh-CN.png)
 
 4.  运行您所在地域对应的安装脚本。
 
@@ -57,20 +57,25 @@ ARMS 提供一键接入方式为 Java 应用安装探针，操作简单，安装
 
     在本示例中，`com.alibaba.mw.arms.apm.supervisor.daemon.Daemon` 对应的进程号为：62857。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152233/155713049443111_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152233/155834110543111_zh-CN.png)
 
 2.  执行命令 `kill -9 进程号`。例如：`kill -9 62857`。
 3.  重新启动您的应用。
 
 ## 常见问题 {#section_cpz_bwg_qgb .section}
 
-如果在执行一键接入 Java 应用脚本时出现 getcwd 相关错误：
+1.  如果在执行一键接入 Java 应用脚本时以下出现 getcwd 相关错误该怎么处理？
 
-```
-shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory Error occurred during initialization of VM java.lang.Error: Properties init: Could not determine current working directory. at java.lang.System.initProperties(Native Method) at java.lang.System.initializeSystemClass(System.java:1119)
-```
+    ``` {#codeblock_i3b_z7v_5k2}
+    shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory Error occurred during initialization of VM java.lang.Error: Properties init: Could not determine current working directory. at java.lang.System.initProperties(Native Method) at java.lang.System.initializeSystemClass(System.java:1119)
+    ```
 
-可能原因是执行脚本过程中误删了当前目录。解决办法为：先执行 `cd`，然后重新运行脚本。
+    可能原因是执行脚本过程中误删了当前目录。解决办法为：先执行 `cd`，然后重新运行脚本。
+
+2.  使用一键接入方式安装探针后，在哪里查看日志？
+
+    日志的默认目录为：/root/.arms/supervisor/logs/arms-supervisor.log，若此目录下没有日志，请执行命令`ps -ef |grep arms`查看日志所在目录。
+
 
 ## 相关文档 {#section_d4p_2y1_mgb .section}
 
