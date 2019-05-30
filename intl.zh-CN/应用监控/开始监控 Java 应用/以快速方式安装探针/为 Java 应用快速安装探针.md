@@ -10,13 +10,13 @@ ARMS 提供一键接入方式为 Java 应用安装探针，操作简单，安装
 
 ## 操作步骤 {#section_st2_rzl_lgb .section}
 
-具体接入步骤如下：
+具体操作步骤如下：
 
 1.  登录 [ARMS 控制台](https://arms-ap-southeast-1.console.aliyun.com/#/home)，在左侧导航栏中选择**应用监控** \> **应用列表** 。
 2.  在应用列表页面右上角单击**新接入应用**。
 3.  在新接入应用页面选择使用语言为 **Java**，选择使用环境为**默认环境**，选择接入方式为**一键接入**。 然后查看并保存 LicenseKey。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152233/155834110544367_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152233/155920511544367_zh-CN.png)
 
 4.  运行您所在地域对应的安装脚本。
 
@@ -47,6 +47,8 @@ ARMS 提供一键接入方式为 Java 应用安装探针，操作简单，安装
 -   执行安装脚本后，该脚本会自动下载最新探针。
 -   若您的服务器只有一个 Java 进程，安装脚本会默认选择该进程安装探针；若您的服务器有多个 Java 进程，请根据提示选择一个进程安装探针。
 
+## 结果验证 {#section_w1t_4ca_kti .section}
+
 约一分钟后，若您的应用出现在应用列表中且有数据上报，则说明接入成功。
 
 ## 卸载探针 {#section_xkw_j3m_lgb .section}
@@ -57,7 +59,7 @@ ARMS 提供一键接入方式为 Java 应用安装探针，操作简单，安装
 
     在本示例中，`com.alibaba.mw.arms.apm.supervisor.daemon.Daemon` 对应的进程号为：62857。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152233/155834110543111_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152233/155920511543111_zh-CN.png)
 
 2.  执行命令 `kill -9 进程号`。例如：`kill -9 62857`。
 3.  重新启动您的应用。
@@ -77,7 +79,7 @@ ARMS 提供一键接入方式为 Java 应用安装探针，操作简单，安装
     日志的默认目录为：/root/.arms/supervisor/logs/arms-supervisor.log，若此目录下没有日志，请执行命令`ps -ef |grep arms`查看日志所在目录。
 
 
-## 相关文档 {#section_d4p_2y1_mgb .section}
+## 更多信息 {#section_d4p_2y1_mgb .section}
 
 -   [为 Java 应用安装探针的常见问题](../../../../intl.zh-CN/常见问题/应用监控常见问题/为 Java 应用安装探针的常见问题.md#)
 -   [使用 OpenFeign 组件的应用在 ARMS 中数据不完整怎么办？](../../../../intl.zh-CN/常见问题/应用监控常见问题/使用 OpenFeign 组件的应用在 ARMS 中数据不完整怎么办？.md#)
