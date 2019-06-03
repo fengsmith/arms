@@ -31,8 +31,8 @@ ARMS 前端监控提供一系列 SDK 配置项，让您能够通过设置不同�
 |parseHash|Function|配合 enableSPA 使用，详情见“部分设置项详细说明”。|否|见“部分设置项详细说明”。|
 |disableHook|Boolean|是否禁用 AJAX 请求监听，默认会监听并用于 API 调用成功率上报|否|`false`|
 |ignoreUrlCase|Boolean|是否忽略 Page URL 大小写，默认为忽略|否|`true`|
-|urlHelper|\*|URL 过滤规则，详情见“部分设置项详细说明”。|否|见“部分设置项详细说明”。|
-|apiHelper|\*|API 过滤规则，详情见“部分设置项详细说明”。|否|见“部分设置项详细说明”。|
+|urlHelper|\*|代替旧字段 `ignoreUrlPath`，用于配置 URL 过滤规则，详情见“部分设置项详细说明”。|否|见“部分设置项详细说明”。|
+|apiHelper|\*|代替旧字段 `ignoreApiPath`，用于配置 API 过滤规则，详情见“部分设置项详细说明”。|否|见“部分设置项详细说明”。|
 |ignore|Object|忽略指定 URL/API/JS Error。符合规则的日志将被忽略，不会上报，包含子配置项 `ignoreUrls`、`ignoreApis` 和 `ignoreErrors`。|否|见“部分设置项详细说明”。|
 |disabled|Boolean|禁用日志上报功能|否|`false`|
 |sample|Integer|日志采样配置，值为 `1`、`10` 或 `100`。性能和成功 API 日志按照 `1/sample`。详情见“部分设置项详细说明”。|否|见“部分设置项详细说明”。|
@@ -40,7 +40,7 @@ ARMS 前端监控提供一系列 SDK 配置项，让您能够通过设置不同�
 |useFmp|Boolean|是否采集首屏 FMP（First Meaningful Paint，首次有效渲染）数据。|否|`false`|
 |enableLinkTrace|Boolean|是否允许进行前后端链路追踪。详情见[前后端链路追踪](intl.zh-CN/前端监控/控制台功能/前后端链路追踪.md#)。|否|`false`|
 |release|String|应用版本号。|否|`undefined`|
-|enviroment|String|设置 tarcing 的环境，默认为 `production`。|否|`production`|
+|enviroment|String|设置 tracing 的环境，默认为 `production`。|否|`production`|
 
 ## 部分设置项详细说明 {#section_fbe_il5_mi0 .section}
 
