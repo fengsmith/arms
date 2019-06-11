@@ -18,7 +18,7 @@
 
 3.  在新应用接入页面选择使用语言为 **PHP**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152237/155920509644408_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152237/156021826244408_zh-CN.png)
 
 4.  采用以下任意一种方法下载 PHP 探针，完成后单击**下一步**。
 
@@ -60,7 +60,7 @@
 
 6.  在安装探针页签查看并保存 LicenseKey。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152237/155920509643126_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152237/156021826243126_zh-CN.png)
 
 7.  采用以下方法之一安装和配置探针。
 
