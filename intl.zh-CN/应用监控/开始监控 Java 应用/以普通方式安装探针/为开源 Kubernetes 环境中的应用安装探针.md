@@ -42,7 +42,7 @@ ARMS 应用监控目前仅支持无状态（Deployment）和有状态（Stateful
 2.  在应用列表页面右上角单击**新接入应用**。
 3.  在新接入应用页面然后查看并保存 LicenseKey。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152532/155618286445312_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152532/156021838545312_zh-CN.png)
 
 3.  修改目标 Deployment 应用的 yaml 文件。
 
@@ -78,7 +78,7 @@ ARMS 应用监控目前仅支持无状态（Deployment）和有状态（Stateful
         										
         ```
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152231/155618286443108_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152231/156021838543108_zh-CN.png)
 
         **示例：**
 
