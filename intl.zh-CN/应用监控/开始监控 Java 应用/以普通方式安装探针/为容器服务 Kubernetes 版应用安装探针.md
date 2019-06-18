@@ -15,7 +15,7 @@
 
 3.  在应用目录-ack-arms-pilot 页面右侧的**创建**区域，编辑创建信息后单击**创建**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152230/155618284943097_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152230/156021837943097_zh-CN.png)
 
 
 ## 授权 {#accredition .section}
@@ -28,7 +28,7 @@
 
 3.  在**集群资源**区域单击 **Worker RAM 角色**栏的链接，进入 RAM 控制台的 **RAM 角色管理**页面。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152230/155618284943098_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152230/156021837943098_zh-CN.png)
 
     若您使用的是旧版的 RAM 控制台，请切换至新版 RAM 控制台，然后重新执行[第 3 步](#step3)。切换步骤如下：
 
@@ -50,7 +50,7 @@
     }				
     ```
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152230/155618285043099_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152230/156021838043099_zh-CN.png)
 
 
 ## 部署 ARMS 应用监控 { .section}
@@ -75,7 +75,7 @@
           armsPilotCreateAppName: "<your-deployment-name>"								
         ```
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152230/155618285043103_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152230/156021838043103_zh-CN.png)
 
     示例：
 
@@ -234,7 +234,7 @@
 
 2.  在应用列表页选择**集群**和**命名空间**，并在目标应用右侧选择**更多** \> **查看 Yaml**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152230/155618285043106_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152230/156021838043106_zh-CN.png)
 
 3.  在 yaml 文件中，添加以下字段来部署 ARMS 应用监控，并单击**更新**。
 
@@ -248,7 +248,7 @@
            armsPilotCreateAppName: "<your-deployment-name>"									
         ```
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152230/155618285045372_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152230/156021838145372_zh-CN.png)
 
 
 ## 结果验证 { .section}
@@ -257,5 +257,5 @@
 
 **说明：** 若**操作**列没有出现 **ARMS 控制台**，请检查您是否授权容器服务调用 ARMS，请参考[授权](#accredition)。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152230/155618285043107_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152230/156021838143107_zh-CN.png)
 

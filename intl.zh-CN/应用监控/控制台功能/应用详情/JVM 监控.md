@@ -51,6 +51,6 @@ ARMS 的 JVM 监控功能可以帮助您监控以下指标。
 
         **说明：** 每个图表必须至少有一个指标设为可见。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152242/155745764943130_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152242/156021841943130_zh-CN.png)
 
 

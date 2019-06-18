@@ -23,7 +23,7 @@ RAM 用户角色是一种虚拟用户，它没有实际的身份认证密钥，�
 1.  在 [RAM 控制台](http://ram.console.aliyun.com)左侧导航栏中选择**角色管理**。
 2.  在角色管理页面上找到需要授权的角色，单击**操作**栏中的**授权**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152350/155489759443265_zh-CN.png) 
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152350/155489764243265_zh-CN.png) 
 
 3.  在编辑角色授权策略对话框中，通过关键词搜索授权策略 **AliyunARMSFullAccess**，并单击 **\>** 按钮将该授权策略移至右侧的**已选授权策略名称**列表，然后单击**确定**。
 
@@ -34,15 +34,15 @@ RAM 用户角色需要被一个受信的实体用户扮演才能正常使用，�
 1.  在 RAM 控制台左侧导航栏中选择**用户管理**。
 2.  在用户管理页面上找到需要授权的用户，单击**操作**栏中的**授权**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152350/155489759443266_zh-CN.png) 
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152350/155489764343266_zh-CN.png) 
 
-    **说明：** 如果没有 RAM 用户，请按照[创建 RAM 子账号并授权](cn.zh-CN/访问控制/创建 RAM 子账号并授权.md#)的说明创建一个。
+    **说明：** 如果没有 RAM 用户，请按照[创建 RAM 子账号并授权](intl.zh-CN/访问控制/创建 RAM 子账号并授权.md#)的说明创建一个。
 
 3.  在编辑个人授权策略对话框中，通过关键词搜索授权策略 AliyunSTSAssumeRoleAccess，并单击 **\>** 按钮将该授权策略移至右侧的**已选授权策略名称**列表，然后单击**确定**。
 
 ## 步骤四：获取 RAM 用户角色的临时安全令牌 {#section_ybq_j34_hhb .section}
 
-关于获取 STS 安全令牌的详细信息，请参见[使用入门](../../../../../cn.zh-CN/SDK参考/SDK参考（STS）/Java SDK/使用入门.md#)。
+关于获取 STS 安全令牌的详细信息，请参见[使用入门](../../../../../intl.zh-CN/SDK参考/SDK参考（STS）/Java SDK/使用入门.md#)。
 
 1.  在 pom.xml 中添加 Maven 依赖。
 
@@ -88,9 +88,9 @@ RAM 用户角色需要被一个受信的实体用户扮演才能正常使用，�
 
     **说明：** 
 
-    -   -   关于 STS 各地域的 Endpoint，请参见[服务地址](../../../../../cn.zh-CN/API 参考（STS）/附录/服务地址.md#)。
+    -   -   关于 STS 各地域的 Endpoint，请参见[服务地址](../../../../../intl.zh-CN/API 参考（STS）/附录/服务地址.md#)。
     -   获取 roleArn 的方法：以创建 RAM 角色的主账号登录 [RAM 控制台](http://ram.console.aliyun.com)，并在左侧导航栏中选择**角色管理**。然后在角色管理页面上单击角色名称或**操作**栏中的**管理**，即可在角色详情页面的**基本信息**区域查看该角色 ARN。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152350/155489759443267_zh-CN.png) 
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/152350/155489764343267_zh-CN.png) 
 
 
