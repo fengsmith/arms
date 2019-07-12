@@ -24,7 +24,7 @@ ARMS Prometheus 监控提供的预置监控仪表板包括 K8s 集群概览、K8
 
 -   K8s 集群概览仪表板
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/531966/156290373749438_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/531966/156290710749438_zh-CN.png)
 
     该仪表板展示的监控指标主要包括：
 
@@ -34,7 +34,7 @@ ARMS Prometheus 监控提供的预置监控仪表板包括 K8s 集群概览、K8
     -   网络信息：例如网络 I/O 压力、Pod 网络 I/O、所有进程网络 I/O。
 -   K8s 部署仪表板
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868729/156290373751317_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868729/156290710751317_zh-CN.png)
 
     该仪表板展示的监控指标主要包括：
 
@@ -42,7 +42,7 @@ ARMS Prometheus 监控提供的预置监控仪表板包括 K8s 集群概览、K8
     -   详情：CPU 使用率、内存使用率、全部进程网络 I/O。
 -   Pod 仪表板
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868729/156290373851318_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868729/156290710751318_zh-CN.png)
 
     该仪表板展示的监控指标主要包括：
 
@@ -53,7 +53,7 @@ ARMS Prometheus 监控提供的预置监控仪表板包括 K8s 集群概览、K8
     -   网络信息：例如网络 I/O 压力、Pod 网络 I/O、所有进程网络 I/O。
 -   主机详情仪表板
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/531966/156290373849437_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/531966/156290710749437_zh-CN.png)
 
     该仪表板展示的监控指标主要包括：
 
@@ -66,19 +66,19 @@ ARMS Prometheus 监控提供的预置监控仪表板包括 K8s 集群概览、K8
 
 对仪表板的常用操作如下所示。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868729/156290373851325_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868729/156290710751325_zh-CN.png)
 
 1.  切换仪表板
 
     该下拉菜单显示当前查看的仪表板名称，并可用于切换至下拉菜单中的其他仪表板。您可以通过在顶部搜索栏中输入名称来查找仪表板，或者使用 Filter（筛选条件）在下拉菜单中筛选出带有指定 Tag（标签）的仪表板。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868729/156290373951327_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868729/156290710751327_zh-CN.png)
 
 2.  设置时间区间和刷新频率
 
     单击此图标后，您可以在浮层中选择预定义的监控数据相对时间区间，例如过去 5 分钟、过去 12 小时、过去 30 天等，也可以通过设置时间起点和终点来设置自定义的绝对时间区间。此外，您可以在浮层中设置仪表板的刷新频率。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868729/156290373951326_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868729/156290710751326_zh-CN.png)
 
 3.  扩大时间区间
 
@@ -97,7 +97,7 @@ ARMS Prometheus 监控提供的预置监控仪表板包括 K8s 集群概览、K8
 
 单击面板顶部的下拉菜单后，可进行以下操作：
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868729/156290373951328_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868729/156290710851328_zh-CN.png)
 
 -   全屏查看当前面板：单击 **View**，或按快捷键 V。再次按快捷键 V 或 Esc 即可退出全屏模式。
 -   分享当前面板：单击 **Share**，或依次按下 P 和 S 打开分享对话框，获得当前面板的分享链接、嵌入链接或快照链接。
@@ -107,6 +107,6 @@ ARMS Prometheus 监控提供的预置监控仪表板包括 K8s 集群概览、K8
 
 ## 更多信息 {#section_x5r_29g_5p4 .section}
 
--   [Export CSV](intl.zh-CN/Prometheus监控/Prometheus 监控概述.md#)
+-   [Prometheus 监控概述](intl.zh-CN/Prometheus监控/Prometheus 监控概述.md#)
 -   [安装监控插件](intl.zh-CN/Prometheus监控/开始使用 Prometheus 监控.md#section_cpd_cg9_vul)
 
